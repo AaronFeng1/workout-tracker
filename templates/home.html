@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<body class="homePageAboveTheFold">
+    <div class="mainTextContainer">
+        <div>
+            <div class="homeMainText">TRACKMT+</div>
+            <div class="homeSubText">Minmalist workout traker. Perfect if you run short on time and just want to workout.
+            No distractions. </div>
+        </div>
+         <div class="homePageMainBtns">
+            <a href="{% url 'workouts' %}"><button class="homePageBtn">Workouts</button></a>
+            <a href="{% url 'about' %}"><button class="homePageBtn">About Us</button></a>
+        </div>
+    </div>
+</body>
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ workout.name }}{% endblock title %}
+
+{% block content %}
+<div class="workoutDetails">
+    <h1>Current Stats for {{ workout.name }}</h1>
+    <div class="workoutDetailStatsContainer">
+        <div>Sets: {{ workout.sets }}</div>
+        <div>Reps: {{ workout.reps }}</div>
+        <div>Weight: {{ workout.weight }}</div>
+    </div>
+    <div class="workoutDetailUD">
+        <a href="{% url 'update' pk=workout.pk %}">
+            <button>Update</button>
+        </a>
+        <a href="{% url 'delete' pk=workout.pk %}">
+            <button>Delete</button>
+        </a>
+    </div>
+</div>
+
+<div class="workoutUpdateDetails">
+    <h2>Updates for {{ workout.name }}</h2>
+    <div class="updates">
+        {% for update in workout_history reversed %}
+            <div class="workoutUpdateHistory">
+                <div>{{ update.timeCreated }}</div>
+                <div>{{ update.name }}</div>
+                <div>Sets: {{ update.sets }}</div>
+                <div>Reps: {{ update.reps }}</div>
+                <div>Weight: {{ update.weight }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

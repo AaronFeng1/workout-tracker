@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block content %}
+<body class="aboutContainer">
+    <div class="aboutOne">
+        <div>
+            <div class="aboutHeading">About Us</div>
+            <p class="aboutText">Here at TRACKMT+, we believe in effieciency. We believe that every lifter should focus on the lifts, not the statistics. We attest to that with out TRACKMT+ workout lifts tracker. Check it out now!</p>
+        </div>
+        <div class="aboutButtons">
+            <a href="{% url 'view' %}">
+                <button class="aboutPageBtn">View Workouts</button>
+            </a>
+            <a href="">
+                <button class="aboutPageBtn">Support Us</button>
+            </a>
+        </div>
+    </div>
+</body>
+{% endblock content %}

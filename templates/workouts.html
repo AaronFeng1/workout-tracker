@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Workouts{% endblock title %}
+
+{% block content %}
+<body class="workoutsPageAboveTheFold">
+    <h1 class="title">What would you like to do? </h1>
+    <div class="card">
+        <a href="{% url 'view' %}">
+            <button>View my current workouts</button>
+        </a>
+    </div>
+    <div class="card">
+        <a href="{% url 'create' %}">
+            <button>Create a new workout!</button>
+        </a>
+    </div>
+</body>
+{% endblock content %}

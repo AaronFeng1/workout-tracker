@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Create Workout{% endblock title %}
+
+{% block content %}
+{% if form.instance == workout %}
+<h1>Update your log for {{ workout.name }}</h1>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Create!</button>
+</form>
+{% endblock content %}

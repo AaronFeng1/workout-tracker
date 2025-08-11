@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.mainHeaderLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 36px;
+    padding: 36px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 5px gray;
+    font-size: 20px;
+}
+
+.homePageAboveTheFold {
+    background-image: url("../images/pexels-marta-nogueira-589022975-17092544.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.mainTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-top: 45vh;
+    padding: 36px;
+}
+
+.homeMainText, .aboutHeading {
+    color: aliceblue;
+    text-shadow: 1px 2px 5px gray;
+    font-size: 200px;
+}
+
+.homeSubText, .aboutText {
+    color: aliceblue;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.homePageMainBtns, .aboutButtons {
+    display: flex;
+    gap: 50px;
+    padding-top: 24px;
+}
+
+.homePageBtn, .aboutPageBtn {
+    border: 1px solid white;
+    color: aliceblue;
+    background-color: transparent;
+    padding: 24px;
+    font-size: 36px;
+}
+
+.homePageBtn:hover, .aboutPageBtn:hover, .button:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.workoutContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    gap: 35px;
+    box-shadow: 1px 3px 2px gray;
+}
+
+.workoutDetails {
+    border: 1px solid black;
+    padding: 35px;
+}
+
+.workoutUpdateDetails {
+    border: 1px solid black;
+    padding: 35px;
+    margin-top: 35px;
+}
+
+.workoutTimeCreated, .workoutUpdateHistory {
+    display: flex;
+    gap: 25px;
+}
+
+.aboutContainer {
+    background-image: url("../images/istockphoto-1413390998-612x612.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+}
+
+.aboutOne {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 35px;
+}
+
+.aboutOne > div {
+    grid-column: 2;
+}
+
+.aboutButtons {
+    justify-content: end;
+}
+
+.aboutHeading, .aboutText {
+    text-align: end;
+}
+
+.workoutListHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: black;
+    color: aliceblue;
+    padding: 8px;
+    border-radius: 16px;
+    font-size: 16px;
+    margin-right: 24px;
+}

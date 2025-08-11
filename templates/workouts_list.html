@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}All Workouts{% endblock title %}
+
+{% block content %}
+<body class="workoutContainer">
+    <div class="workoutListHeader">
+        <h1>My Program</h1>
+        <a href="{% url 'create' %}">
+            <button class="button">Create New Workout</button>
+        </a>
+    </div>
+    {% for workout in workouts %}
+    <div class="card">
+        <div class="workout Name">{{ workout.name }}</div>
+        <div class="workout Sets">{{ workout.sets }}</div>
+        <div class="workout Reps">{{ workout.reps }}</div>
+        <div class="workout Weight">{{ workout.weight }}</div>
+        <a class="workoutDetails" href="{% url 'details' pk=workout.pk %}">
+            <button>Details</button>
+        </a>
+    </div>  
+    {% empty %}
+    <h2>You have no workouts...</h2>
+    <a href="{% url 'create' %}">Click here to add a workout!</a>
+    {% endfor %}
+</body>
+{% endblock content %}

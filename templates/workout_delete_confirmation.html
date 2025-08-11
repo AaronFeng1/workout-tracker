@@ -1,0 +1,8 @@
+{% extends "home.html" %}
+
+{% block title %}Sucess{% endblock title %}
+
+{% block content %}
+<h1>Your Workout, {{ workout.name }}, Has Been Succesfully Deleted. </h1>
+<a href="{% url 'view' %}">Back to workouts</a>
+{% endblock content %}
