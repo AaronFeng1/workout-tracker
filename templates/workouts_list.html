@@ -5,7 +5,10 @@
 {% block content %}
 <body class="workoutContainer">
     <div class="workoutListHeader">
-        <h1>My Program</h1>
+        <div class="introText">
+            <h1>Hello, {{ user.username }}</h1>
+            <h2>My Program</h2>
+        </div>  
         <a href="{% url 'create' %}">
             <button class="button">Create New Workout</button>
         </a>

@@ -15,10 +15,28 @@
             <a href="{% url 'view' %}">Workouts</a>
             <a href="{% url 'about' %}">About Us</a>
             <a href="#">Support Us</a>
+            {% if user.is_authenticated %}
+            <div class="dropDown">
+                <a href="#" id="authenticatedUser">
+                    <button class="dropDownBtn">{{ user.username }}</button>
+                </a>
+                <div class="dropDownSections">
+                        <form action="{% url 'logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="dropDownBtn">Logout</button>
+                        </form>
+                    <button class="dropDownBtn">coming soon</button>
+                </div>
+            </div>
+            {% else %}
+            <a href="{% url 'login' %}">Sign In</a>
+            {% endif %}
         </div>
     </header>
     <main>
         {% block content %}{% endblock content %}
     </main>
+
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

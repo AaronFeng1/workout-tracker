@@ -13,13 +13,19 @@ body {
     gap: 36px;
     padding: 36px;
     position: relative;
+    align-items: center;
 }
 
-a {
+.mainHeaderLinks > a {
     text-decoration: none;
     color: white;
-    text-shadow: 1px 1px 5px gray;
     font-size: 20px;
+    padding: 8px 8px;
+}
+
+a:hover {
+    background-color: aliceblue;
+    color: black;
 }
 
 .homePageAboveTheFold {
@@ -139,4 +145,33 @@ a {
     border-radius: 16px;
     font-size: 16px;
     margin-right: 24px;
+}
+
+.dropDown {
+    display: block;
+    position: relative;
+}
+
+.dropDownSections {
+    display: none;
+    flex-direction: column;
+    max-width: 100%;
+    position: absolute;
+    max-width: 100%;
+    top: 40.5px;
+    left: 0;
+}
+
+.dropDownBtn {
+    font-size: 20px;
+    padding: 8px 16px;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    overflow: scroll;
+}
+
+.dropDownBtn:hover {
+    background-color: aliceblue;
+    color: black;
 }
